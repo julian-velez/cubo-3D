@@ -1,0 +1,60 @@
+*{
+    background-color: black;
+
+}
+
+.container{
+    width: 250px;
+    height: 250px;
+    perspective: 1500px;
+    cursor: pointer;
+
+    /*for contering the container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.cube{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease-in-out;
+}
+
+.front,.bottom{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.font img{
+    width: 100%;
+    height: 100%;
+}
+
+.bottom{
+    background-color: white;
+        transform:rotateX(90deg);
+    transform-origin: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom h1{
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 20px;
+    transform: rotateX(180deg);
+}
+
+.container:hover .cube{
+    transform: translate(0,-50%) rotateX(90deg);
+}
